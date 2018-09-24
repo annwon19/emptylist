@@ -1,0 +1,29 @@
+<html>
+<head></head>
+<body>
+
+
+<input type="text" id="usersChoice">
+<button onclick="list()">add to list</button>
+<ol>
+  <li></li>
+</ol>
+<script>
+//you will be building an empty list that will be added to when a user enters values into a text field box
+//build a text box^^//
+//take the value and save it as a variable
+  function list(){
+    var usersChoice= document.getElementById('usersChoice').value;
+//clear the text box
+    document.getElementById('usersChoice').value=" ";
+//add what they typed in an ordered list
+    var newList=document.createElement('li');
+    var newText=document.createTextNode(usersChoice);
+    newList.appendChild(newText);
+    var position=document.getElementsByTagName('ol')[0];
+    position.appendChild(newList);
+  }
+</script>
+
+</body>
+</html>
